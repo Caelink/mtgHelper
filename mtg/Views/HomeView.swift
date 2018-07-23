@@ -11,12 +11,14 @@ import UIKit
 protocol HomeViewDelegate {
     func homeViewDidTapPlay(view: HomeView)
     func homeViewDidTapTrade(view: HomeView)
+    func homeViewDidTapLookup(view: HomeView)
 }
 
 class HomeView: UIView {
     let delegate: HomeViewDelegate
     var playButton: PrimaryButton = PrimaryButton(text: "Play", colour: InterfaceColours.green)
     var tradeButton: PrimaryButton = PrimaryButton(text: "Trade", colour: InterfaceColours.lightBlue)
+    var lookupButton: PrimaryButton = PrimaryButton(text: "Lookup", colour: InterfaceColours.orange)
     
     var menuScreenTitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
@@ -43,18 +45,19 @@ class HomeView: UIView {
             menuScreenTitleLabel.centerYAnchor.constraint(equalTo: topAnchor, constant: 200)
         ])
         
-        addSubview(playButton)
-        addConstraints(playButton.buildConstraints())
-        addConstraint(playButton.bottomAnchor.constraint(equalTo: centerYAnchor, constant: 40))
+        verticalCascadeLayout(of: [playButton, tradeButton, lookupButton], from: centerYAnchor, margin: 20)
+        
         playButton.addAction(for: .touchUpInside) { [unowned self] in
             self.delegate.homeViewDidTapPlay(view: self)
         }
         
-        addSubview(tradeButton)
-        addConstraints(tradeButton.buildConstraints())
-        addConstraint(tradeButton.bottomAnchor.constraint(equalTo: centerYAnchor, constant: 100))
         tradeButton.isEnabled = false
         tradeButton.addAction(for: .touchUpInside) { [unowned self] in
+            self.delegate.homeViewDidTapTrade(view: self)
+        }
+        
+        lookupButton.isEnabled = false
+        lookupButton.addAction(for: .touchUpInside) { [unowned self] in
             self.delegate.homeViewDidTapTrade(view: self)
         }
     }

@@ -13,11 +13,10 @@ class PlayerView: UIView {
     var lifeCounter: UILabel = {
         let label = UILabel()
         label.text = String(describing: 20)
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 1
-        label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.systemFont(ofSize: 26.0)
         label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -31,7 +30,8 @@ class PlayerView: UIView {
         self.identifier = identifier
         self.lifeTotal = initialLife
         super.init(frame: .zero)
-        self.backgroundColor = InterfaceColours.rust
+        self.backgroundColor = [InterfaceColours.rust, InterfaceColours.orange][identifier % 2]
+        self.translatesAutoresizingMaskIntoConstraints = false
         self.setup()
     }
     
@@ -45,6 +45,7 @@ class PlayerView: UIView {
         ])
     }
     
+    // MARK: Annoying Boilerplate
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

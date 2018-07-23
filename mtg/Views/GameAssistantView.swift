@@ -9,7 +9,7 @@
 import UIKit
 
 protocol GameAssistantViewDelegate {
-    func gameAssistant(view: GameAssistantView, changedLifeTotalForPlayerAtIndex: Int, by: Int)
+    func gameAssistant(view: GameAssistantView, changedLifeTotalForPlayerAt index: Int, by amount: Int)
 }
 
 class GameAssistantView: UIView {
@@ -17,7 +17,7 @@ class GameAssistantView: UIView {
     var players: [PlayerView]
     
     init(delegate: GameAssistantViewDelegate, players: Int = 2) {
-        assert(players != 2, "Sorry, only 2 players supported at the moment!")
+        assert(players == 2, "Sorry, only 2 players supported at the moment!")
         self.delegate = delegate
         self.players = (0..<players).map({ (identifier) -> PlayerView in
             PlayerView(identifier: identifier, initialLife: 20)
@@ -27,29 +27,21 @@ class GameAssistantView: UIView {
     }
     
     func setup() {
-        cascadeLayoutOf(views:players)
+        self.backgroundColor = .green
+        verticalCascadeLayout(of: players, from: safeAreaLayoutGuide.topAnchor, margin: 0)
+        for player in players {
+            addConstraints([
+                player.leftAnchor.constraint(equalTo: leftAnchor),
+                player.rightAnchor.constraint(equalTo: rightAnchor)
+            ])
+        }
+        if let last = players.last {
+            addConstraint(last.bottomAnchor.constraint(equalTo: bottomAnchor))
+        }
     }
     
     // MARK: Annoying Boilerplate
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension GameAssistantView {
-    func cascadeLayoutOf(views: [UIView]) {
-        var previousAnchor: NSLayoutAnchor = topAnchor
-        for view in views {
-            addSubview(view)
-            addConstraints([
-                view.topAnchor.constraint(equalTo: previousAnchor),
-                view.leftAnchor.constraint(equalTo: leftAnchor),
-                view.rightAnchor.constraint(equalTo: rightAnchor)
-            ])
-            previousAnchor = view.bottomAnchor
-        }
-        if let lastView = views.last {
-            addConstraint(lastView.bottomAnchor.constraint(equalTo: bottomAnchor))
-        }
     }
 }

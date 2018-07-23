@@ -25,10 +25,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewDelegate {
     func homeViewDidTapPlay(view: HomeView) {
-        /* No-op */
+        navigationController?.pushViewController(GameAssistantViewController(), animated: true)
     }
     
     func homeViewDidTapTrade(view: HomeView) {
+        /* No-op */
+    }
+    
+    func homeViewDidTapLookup(view: HomeView) {
         /* No-op */
     }
 }

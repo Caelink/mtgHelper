@@ -12,7 +12,8 @@
 		0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070E21053960009048A2 /* GameAssistantViewController.swift */; };
 		0D340711210539A2009048A2 /* GameAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340710210539A2009048A2 /* GameAssistantView.swift */; };
 		0D34071321054693009048A2 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34071221054693009048A2 /* PlayerView.swift */; };
-		0D340715210546A7009048A2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340714210546A7009048A2 /* ReusableView.swift */; };
+		0D340715210546A7009048A2 /* OpinionatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340714210546A7009048A2 /* OpinionatedView.swift */; };
+		0D340717210576EC009048A2 /* UIView+CascadingSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340716210576EC009048A2 /* UIView+CascadingSubviews.swift */; };
 		0D8A020620FC631C00286C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A020520FC631C00286C9C /* AppDelegate.swift */; };
 		0D8A020820FC631C00286C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A020720FC631C00286C9C /* HomeViewController.swift */; };
 		0D8A020D20FC631D00286C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D8A020C20FC631D00286C9C /* Assets.xcassets */; };
@@ -27,7 +28,8 @@
 		0D34070E21053960009048A2 /* GameAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantViewController.swift; sourceTree = "<group>"; };
 		0D340710210539A2009048A2 /* GameAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantView.swift; sourceTree = "<group>"; };
 		0D34071221054693009048A2 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		0D340714210546A7009048A2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		0D340714210546A7009048A2 /* OpinionatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionatedView.swift; sourceTree = "<group>"; };
+		0D340716210576EC009048A2 /* UIView+CascadingSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CascadingSubviews.swift"; sourceTree = "<group>"; };
 		0D8A020220FC631C00286C9C /* mtg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mtg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8A020520FC631C00286C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D8A020720FC631C00286C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +69,8 @@
 				0D34070A21052ED0009048A2 /* Colours.swift */,
 				0D34070C21053666009048A2 /* ClosureActions.swift */,
 				0D34071221054693009048A2 /* PlayerView.swift */,
-				0D340714210546A7009048A2 /* ReusableView.swift */,
+				0D340714210546A7009048A2 /* OpinionatedView.swift */,
+				0D340716210576EC009048A2 /* UIView+CascadingSubviews.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -173,10 +176,11 @@
 			files = (
 				0D34071321054693009048A2 /* PlayerView.swift in Sources */,
 				0D8A021820FC656A00286C9C /* HomeView.swift in Sources */,
+				0D340717210576EC009048A2 /* UIView+CascadingSubviews.swift in Sources */,
 				0D340711210539A2009048A2 /* GameAssistantView.swift in Sources */,
 				0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */,
 				0D34070D21053666009048A2 /* ClosureActions.swift in Sources */,
-				0D340715210546A7009048A2 /* ReusableView.swift in Sources */,
+				0D340715210546A7009048A2 /* OpinionatedView.swift in Sources */,
 				0D34070B21052ED0009048A2 /* Colours.swift in Sources */,
 				0D8A020820FC631C00286C9C /* HomeViewController.swift in Sources */,
 				0D8A021A20FC67A600286C9C /* PrimaryButton.swift in Sources */,

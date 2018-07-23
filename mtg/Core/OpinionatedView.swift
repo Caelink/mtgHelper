@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol ReusableView {
+protocol OpinionatedView {
     func buildConstraints() -> [NSLayoutConstraint]
 }

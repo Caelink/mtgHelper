@@ -31,12 +31,13 @@ class PrimaryButton: UIButton {
         self.showsTouchWhenHighlighted = true
     }
     
+    // MARK: Annoying Boilerplate
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
-extension PrimaryButton: ReusableView {
+extension PrimaryButton: OpinionatedView {
     func buildConstraints() -> [NSLayoutConstraint] {
         guard let superview = superview else {
             return []

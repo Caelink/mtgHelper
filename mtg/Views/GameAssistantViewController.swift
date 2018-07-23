@@ -24,7 +24,7 @@ class GameAssistantViewController: UIViewController {
 }
 
 extension GameAssistantViewController: GameAssistantViewDelegate {
-    func gameAssistant(view: GameAssistantView, changedLifeTotalForPlayerAtIndex: Int, by: Int) {
-        /* No-op */
+    func gameAssistant(view: GameAssistantView, changedLifeTotalForPlayerAt index: Int, by amount: Int) {
+        view.players[index].lifeTotal += amount
     }
 }
