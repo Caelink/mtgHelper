@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		0D284993210977D8009496FB /* Mana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D284992210977D8009496FB /* Mana.swift */; };
 		0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */; };
-		0D28499821098455009496FB /* PlayerCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28499721098455009496FB /* PlayerCollectionViewLayout.swift */; };
 		0D34070B21052ED0009048A2 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070A21052ED0009048A2 /* Colours.swift */; };
 		0D34070D21053666009048A2 /* UIControl+ClosureActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070C21053666009048A2 /* UIControl+ClosureActions.swift */; };
 		0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070E21053960009048A2 /* GameAssistantViewController.swift */; };
-		0D340711210539A2009048A2 /* GameAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340710210539A2009048A2 /* GameAssistantView.swift */; };
 		0D34071321054693009048A2 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34071221054693009048A2 /* PlayerCell.swift */; };
 		0D340715210546A7009048A2 /* OpinionatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340714210546A7009048A2 /* OpinionatedView.swift */; };
 		0D340717210576EC009048A2 /* UIView+CascadingSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340716210576EC009048A2 /* UIView+CascadingSubviews.swift */; };
@@ -28,11 +26,9 @@
 /* Begin PBXFileReference section */
 		0D284992210977D8009496FB /* Mana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mana.swift; sourceTree = "<group>"; };
 		0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+dequeue.swift"; sourceTree = "<group>"; };
-		0D28499721098455009496FB /* PlayerCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewLayout.swift; sourceTree = "<group>"; };
 		0D34070A21052ED0009048A2 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		0D34070C21053666009048A2 /* UIControl+ClosureActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+ClosureActions.swift"; sourceTree = "<group>"; };
 		0D34070E21053960009048A2 /* GameAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantViewController.swift; sourceTree = "<group>"; };
-		0D340710210539A2009048A2 /* GameAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantView.swift; sourceTree = "<group>"; };
 		0D34071221054693009048A2 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		0D340714210546A7009048A2 /* OpinionatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionatedView.swift; sourceTree = "<group>"; };
 		0D340716210576EC009048A2 /* UIView+CascadingSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CascadingSubviews.swift"; sourceTree = "<group>"; };
@@ -73,8 +69,6 @@
 				0D8A020720FC631C00286C9C /* HomeViewController.swift */,
 				0D8A021720FC656A00286C9C /* HomeView.swift */,
 				0D34070E21053960009048A2 /* GameAssistantViewController.swift */,
-				0D340710210539A2009048A2 /* GameAssistantView.swift */,
-				0D28499721098455009496FB /* PlayerCollectionViewLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,12 +189,10 @@
 				0D8A021820FC656A00286C9C /* HomeView.swift in Sources */,
 				0D284993210977D8009496FB /* Mana.swift in Sources */,
 				0D340717210576EC009048A2 /* UIView+CascadingSubviews.swift in Sources */,
-				0D340711210539A2009048A2 /* GameAssistantView.swift in Sources */,
 				0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */,
 				0D34070D21053666009048A2 /* UIControl+ClosureActions.swift in Sources */,
 				0D340715210546A7009048A2 /* OpinionatedView.swift in Sources */,
 				0D34070B21052ED0009048A2 /* Colours.swift in Sources */,
-				0D28499821098455009496FB /* PlayerCollectionViewLayout.swift in Sources */,
 				0D8A020820FC631C00286C9C /* HomeViewController.swift in Sources */,
 				0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */,
 				0D8A021A20FC67A600286C9C /* PrimaryButton.swift in Sources */,
