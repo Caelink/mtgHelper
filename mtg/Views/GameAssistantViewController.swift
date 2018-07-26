@@ -14,7 +14,7 @@ class GameAssistantViewController: UICollectionViewController {
     
     convenience init(players: Int) {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = .init(top: 5, left: 5, bottom: 5, right: 5)
+        layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         self.init(collectionViewLayout: layout)
         self.players = (0..<players).map({ (identifier) -> Player in
             return Player(with: identifier)
@@ -29,7 +29,7 @@ class GameAssistantViewController: UICollectionViewController {
     }
 }
 
-//MARK: UICollectionViewDataSource
+// MARK: UICollectionViewDataSource
 extension GameAssistantViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         assert(indexPath.row < players.count)
@@ -37,6 +37,7 @@ extension GameAssistantViewController {
             fatalError("Couldn't convert to PlayerCell")
         }
         cell.update(from: players[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -45,11 +46,40 @@ extension GameAssistantViewController {
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
 extension GameAssistantViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height: CGFloat = (collectionView.bounds.height - CGFloat(10 * players.count)) / CGFloat(players.count)
         return CGSize(width: collectionView.bounds.size.width, height: height)
+    }
+}
+
+// MARK: PlayerCellDelegate
+extension GameAssistantViewController: PlayerCellDelegate {
+    func player(cell: PlayerCell, took action: PlayerCell.Action) {
+        guard let id = cell.currentPlayer?.identifier else {
+            return
+        }
+        
+        let delta: Int
+        switch action {
+        case .tapLeft:
+            delta = -1
+            break;
+        case .longTapLeft:
+            delta = -10
+            break;
+        case .tapRight:
+            delta = 1
+            break;
+        case .longTapRight:
+            delta = 10
+            break;
+        }
+        
+        players[id].changeLife(by: delta)
+        cell.update(from: players[id])
     }
 }

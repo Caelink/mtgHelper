@@ -66,6 +66,7 @@
 		0D340708210521BE009048A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D34071221054693009048A2 /* PlayerCell.swift */,
 				0D8A020720FC631C00286C9C /* HomeViewController.swift */,
 				0D8A021720FC656A00286C9C /* HomeView.swift */,
 				0D34070E21053960009048A2 /* GameAssistantViewController.swift */,
@@ -79,7 +80,6 @@
 				0D28499621097D5E009496FB /* Extensions */,
 				0D8A021920FC67A600286C9C /* PrimaryButton.swift */,
 				0D34070A21052ED0009048A2 /* Colours.swift */,
-				0D34071221054693009048A2 /* PlayerCell.swift */,
 				0D340714210546A7009048A2 /* OpinionatedView.swift */,
 				0D284992210977D8009496FB /* Mana.swift */,
 			);
