@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewDelegate {
     func homeViewDidTapPlay(view: HomeView) {
-        navigationController?.pushViewController(GameAssistantViewController(), animated: true)
+        navigationController?.pushViewController(GameAssistantViewController(players: 2), animated: true)
     }
     
     func homeViewDidTapTrade(view: HomeView) {
