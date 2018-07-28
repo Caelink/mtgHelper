@@ -3,6 +3,7 @@ A Work in Progress Helper app for all things mtg
 
 Currently working:
 - Life counter for 1v1
+![demo of current state](https://raw.githubusercontent.com/caelink/mtgHelper/master/demo.m4v)
 
 Planned features:
 - More players
