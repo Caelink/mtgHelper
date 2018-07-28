@@ -33,4 +33,5 @@ struct InterfaceColours {
     static var steel: UIColor { return UIColor(red: 96, green: 145, blue: 147) }
     static var orange: UIColor { return UIColor(red: 239, green: 153, blue: 80) }
     static var rust: UIColor { return UIColor(red: 215, green: 156, blue: 140) }
+    static var offwhite: UIColor { return UIColor(red: 255, green: 250, blue: 250) }
 }

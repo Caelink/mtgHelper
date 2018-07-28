@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2769B9210D0BF3006E4178 /* GameAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2769B8210D0BF3006E4178 /* GameAssistantView.swift */; };
+		0D2769BB210D12DA006E4178 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2769BA210D12DA006E4178 /* CircleButton.swift */; };
+		0D2769BD210D16EF006E4178 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2769BC210D16EF006E4178 /* Player.swift */; };
 		0D284993210977D8009496FB /* Mana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D284992210977D8009496FB /* Mana.swift */; };
 		0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */; };
 		0D34070B21052ED0009048A2 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070A21052ED0009048A2 /* Colours.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2769B8210D0BF3006E4178 /* GameAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantView.swift; sourceTree = "<group>"; };
+		0D2769BA210D12DA006E4178 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		0D2769BC210D16EF006E4178 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0D284992210977D8009496FB /* Mana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mana.swift; sourceTree = "<group>"; };
 		0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+dequeue.swift"; sourceTree = "<group>"; };
 		0D34070A21052ED0009048A2 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
@@ -70,6 +76,7 @@
 				0D8A020720FC631C00286C9C /* HomeViewController.swift */,
 				0D8A021720FC656A00286C9C /* HomeView.swift */,
 				0D34070E21053960009048A2 /* GameAssistantViewController.swift */,
+				0D2769B8210D0BF3006E4178 /* GameAssistantView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -82,6 +89,8 @@
 				0D34070A21052ED0009048A2 /* Colours.swift */,
 				0D340714210546A7009048A2 /* OpinionatedView.swift */,
 				0D284992210977D8009496FB /* Mana.swift */,
+				0D2769BA210D12DA006E4178 /* CircleButton.swift */,
+				0D2769BC210D16EF006E4178 /* Player.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -192,10 +201,13 @@
 				0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */,
 				0D34070D21053666009048A2 /* UIControl+ClosureActions.swift in Sources */,
 				0D340715210546A7009048A2 /* OpinionatedView.swift in Sources */,
+				0D2769BB210D12DA006E4178 /* CircleButton.swift in Sources */,
+				0D2769B9210D0BF3006E4178 /* GameAssistantView.swift in Sources */,
 				0D34070B21052ED0009048A2 /* Colours.swift in Sources */,
 				0D8A020820FC631C00286C9C /* HomeViewController.swift in Sources */,
 				0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */,
 				0D8A021A20FC67A600286C9C /* PrimaryButton.swift in Sources */,
+				0D2769BD210D16EF006E4178 /* Player.swift in Sources */,
 				0D8A020620FC631C00286C9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

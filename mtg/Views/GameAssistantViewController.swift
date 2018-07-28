@@ -8,30 +8,41 @@
 
 import UIKit
 
-class GameAssistantViewController: UICollectionViewController {
+class GameAssistantViewController: UIViewController {
     var players: [Player] = []
-    var wrapperView: UIView = UIView()
+    var gameAssistantView: GameAssistantView?
     
     convenience init(players: Int) {
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0)
-        self.init(collectionViewLayout: layout)
+        self.init()
         self.players = (0..<players).map({ (identifier) -> Player in
-            return Player(with: identifier)
+            var p = Player(with: identifier)
+            if players == 2 {
+                let isMe = identifier == 0
+                p.name = isMe ? "Me" : "You"
+                p.colour = isMe ? InterfaceColours.green : InterfaceColours.rust
+            }
+            return p
         })
-        collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height)
+        self.gameAssistantView = GameAssistantView(delegate: self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionView.register(PlayerCell.self, forCellWithReuseIdentifier: PlayerCell.defaultReuseIdentifier)
-        view.backgroundColor = .white
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = gameAssistantView
     }
 }
 
 // MARK: UICollectionViewDataSource
-extension GameAssistantViewController {
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+extension GameAssistantViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         assert(indexPath.row < players.count)
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlayerCell.defaultReuseIdentifier, for: indexPath) as? PlayerCell else {
             fatalError("Couldn't convert to PlayerCell")
@@ -41,18 +52,37 @@ extension GameAssistantViewController {
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return section == 0 ? players.count : 0
     }
 }
 
-// MARK: UICollectionViewDelegateFlowLayout
 extension GameAssistantViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height: CGFloat = (collectionView.bounds.height - CGFloat(10 * players.count)) / CGFloat(players.count)
+        let seperatorCount: CGFloat = CGFloat(players.count)
+        let height: CGFloat = (collectionView.bounds.height - GameAssistantView.playerCellMargin * seperatorCount) / seperatorCount
         return CGSize(width: collectionView.bounds.size.width, height: height)
+    }
+}
+
+extension GameAssistantViewController: GameAssistantViewDelegate {
+    func gameAssistantTappedOptions(view: GameAssistantView) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "End Game", style: .destructive, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Roll d6", style: .default, handler: { _ in
+            let result = Int.random(in: 1..<7)
+            let alert = UIAlertController(title: "Dice Rolled", message: "You rolled a \(result)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                alert.dismiss(animated: false, completion: nil)
+            }))
+            self.present(alert, animated: false, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

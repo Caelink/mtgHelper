@@ -8,34 +8,6 @@
 
 import UIKit
 
-struct Player {
-    let identifier: Int
-    var colour: UIColor = .white
-    var life: Int = 20
-    var infect: Int = 0
-    var floating: ManaPool = ManaPool()
-    
-    init(with identifier: Int) {
-        self.identifier = identifier
-    }
-}
-
-extension Player {
-    mutating func changeLife(by: Int) {
-        life += by
-    }
-}
-
-extension Player: Equatable {
-    static func == (lhs: Player, rhs: Player) -> Bool {
-        return  lhs.identifier == rhs.identifier &&
-            lhs.colour == rhs.colour &&
-            lhs.life == rhs.life &&
-            lhs.infect == rhs.infect &&
-            lhs.floating == rhs.floating
-    }
-}
-
 protocol PlayerCellDelegate {
     func player(cell: PlayerCell, took action:PlayerCell.Action)
 }
@@ -55,13 +27,13 @@ class PlayerCell: UICollectionViewCell {
     }()
     
     var lifeCounter: UILabel = {
-        let label = UILabel()
-        label.text = String(describing: 20)
-        label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 26.0)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+        let tf = UILabel()
+        tf.text = String(describing: 20)
+        tf.font = UIFont.systemFont(ofSize: 26.0)
+        tf.textAlignment = .center
+        tf.numberOfLines = 1
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
     }()
     
     var tapGestureRecognizer: UITapGestureRecognizer = {
@@ -77,7 +49,7 @@ class PlayerCell: UICollectionViewCell {
     
     func update(from player: Player) {
         self.currentPlayer = player
-        self.title.text = "Player \(player.identifier)"
+        self.title.text = player.name ?? "Player \(player.identifier)"
         self.lifeCounter.text = String(describing: player.life)
         self.backgroundColor = player.colour
     }
@@ -101,6 +73,8 @@ class PlayerCell: UICollectionViewCell {
         
         addGestureRecognizer(tapGestureRecognizer)
         tapGestureRecognizer.addTarget(self, action: #selector(PlayerCell.received(tap:)))
+        
+        self.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     // MARK: Annoying Boilerplate
@@ -119,12 +93,13 @@ extension PlayerCell {
     
     @objc func received(tap gestureRecognizer: UITapGestureRecognizer) {
         guard let delegate = delegate,
-            gestureRecognizer.state == .ended else {
+        gestureRecognizer.state == .ended else {
                 return
         }
         let action: PlayerCell.Action
         let halfway = bounds.width / 2
-        if (gestureRecognizer.location(in: self).x < halfway) {
+        let tap = gestureRecognizer.location(in: self)
+        if (tap.x < halfway) {
             action = .tapLeft
         } else {
             action = .tapRight
