@@ -26,4 +26,13 @@ extension UIView {
             previousAnchor = view.bottomAnchor
         }
     }
+    
+    func snapToBounds(view: UIView) {
+        addConstraints([
+            view.leftAnchor.constraint(equalTo: leftAnchor),
+            view.rightAnchor.constraint(equalTo: rightAnchor),
+            view.topAnchor.constraint(equalTo: topAnchor),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
 }

@@ -67,3 +67,10 @@ class GameAssistantView: UIView {
     }
 }
 
+// MARK: Floating Counter support
+extension GameAssistantView {
+    func addCounterView(_ counter: FloatingCounter) {
+        addSubview(counter)
+        addConstraints(counter.buildConstraints())
+    }
+}

@@ -9,7 +9,7 @@
 import UIKit
 
 class CircleButton: UIButton {
-    static let diameter: CGFloat = 50
+    static let diameter: CGFloat = 75
     
     let colour: UIColor
     

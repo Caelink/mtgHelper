@@ -12,12 +12,14 @@ struct Player {
     let identifier: Int
     var name: String?
     var colour: UIColor = .white
-    var life: Int = 20
+    var life: Int
     var infect: Int = 0
     var floating: ManaPool = ManaPool()
+    var counters: [Counter] = []
     
-    init(with identifier: Int) {
+    init(with identifier: Int, life: Int = 20) {
         self.identifier = identifier
+        self.life = life
     }
 }
 
@@ -33,6 +35,7 @@ extension Player: Equatable {
             lhs.colour == rhs.colour &&
             lhs.life == rhs.life &&
             lhs.infect == rhs.infect &&
-            lhs.floating == rhs.floating
+            lhs.floating == rhs.floating &&
+            lhs.counters == rhs.counters
     }
 }

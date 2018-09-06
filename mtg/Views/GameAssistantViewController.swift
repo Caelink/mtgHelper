@@ -11,32 +11,37 @@ import UIKit
 class GameAssistantViewController: UIViewController {
     var players: [Player] = []
     var gameAssistantView: GameAssistantView?
+    var initialState: (() -> ([Player])) = { fatalError("Unknown initial state for players") }
     
-    convenience init(players: Int) {
-        self.init()
-        self.players = (0..<players).map({ (identifier) -> Player in
-            var p = Player(with: identifier)
-            if players == 2 {
-                let isMe = identifier == 0
-                p.name = isMe ? "Me" : "You"
-                p.colour = isMe ? InterfaceColours.green : InterfaceColours.rust
-            }
-            return p
-        })
+    init(with settings: GameSettings) {
+        super.init(nibName: nil, bundle: nil)
+        initialState = {
+            (0..<settings.players).map({ (identifier) -> Player in
+                var p = Player(with: identifier, life: settings.lifeTotal)
+                if settings.players == 2 {
+                    let isMe = identifier == 0
+                    p.name = isMe ? "Me" : "You"
+                    p.colour = isMe ? InterfaceColours.green : InterfaceColours.rust
+                }
+                return p
+            })
+        }
+        self.players = initialState()
         self.gameAssistantView = GameAssistantView(delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func loadView() {
         super.loadView()
         view = gameAssistantView
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -70,8 +75,12 @@ extension GameAssistantViewController: UICollectionViewDelegateFlowLayout {
 extension GameAssistantViewController: GameAssistantViewDelegate {
     func gameAssistantTappedOptions(view: GameAssistantView) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "End Game", style: .destructive, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Home Screen", style: .destructive, handler: { _ in
             self.navigationController?.popViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Reset Game", style: .destructive, handler: { _ in
+            self.players = self.initialState()
+            self.gameAssistantView?.collectionView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "Roll d6", style: .default, handler: { _ in
             let result = Int.random(in: 1..<7)
@@ -107,9 +116,36 @@ extension GameAssistantViewController: PlayerCellDelegate {
         case .longTapRight:
             delta = 10
             break;
+        case .moreOptions:
+            let alert = UIAlertController(title: "Player Options", message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Manage Player Counters", style: .default, handler: { [weak self] _ in
+                guard let self = self else {
+                    return
+                }
+                
+                let playerCountersController = PlayerCountersController(for: self.players[id])
+                self.present(playerCountersController, animated: true, completion: { [weak self] in
+                    guard let players = self?.players else {
+                        return
+                    }
+                    
+                    cell.update(from: players[id])
+                })
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return;
         }
         
         players[id].changeLife(by: delta)
         cell.update(from: players[id])
+    }
+}
+
+// MARK: Floating Counters
+extension GameAssistantViewController {
+    func addCounter(name: String, initially value: Int) {
+        let counter = Counter(name: name, value: value)
+        gameAssistantView?.addCounterView(FloatingCounter(from: counter))
     }
 }

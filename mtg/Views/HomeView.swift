@@ -21,12 +21,8 @@ class HomeView: UIView {
     var lookupButton: PrimaryButton = PrimaryButton(text: "Lookup", colour: InterfaceColours.orange)
     
     var menuScreenTitleLabel: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Caelin's MTG Helper App"
+        let label = Standards.label(showing: "Caelin's MTG Helper App")
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 26.0)
-        label.textAlignment = .center
         return label
     }()
     
