@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CaelinCore
 
 protocol GameAssistantViewDelegate: UICollectionViewDelegate, UICollectionViewDataSource {
     func gameAssistantTappedOptions(view: GameAssistantView)

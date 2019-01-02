@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CaelinCore
 
 class GameAssistantViewController: UIViewController {
     var players: [Player] = []

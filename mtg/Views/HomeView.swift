@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CaelinCore
 
 protocol HomeViewDelegate {
     func homeViewDidTapPlay(view: HomeView)

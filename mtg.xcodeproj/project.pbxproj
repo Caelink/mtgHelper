@@ -8,41 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		0D2769B9210D0BF3006E4178 /* GameAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2769B8210D0BF3006E4178 /* GameAssistantView.swift */; };
-		0D2769BB210D12DA006E4178 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2769BA210D12DA006E4178 /* CircleButton.swift */; };
 		0D2769BD210D16EF006E4178 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2769BC210D16EF006E4178 /* Player.swift */; };
 		0D284993210977D8009496FB /* Mana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D284992210977D8009496FB /* Mana.swift */; };
 		0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */; };
-		0D34070B21052ED0009048A2 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070A21052ED0009048A2 /* Colours.swift */; };
-		0D34070D21053666009048A2 /* UIControl+ClosureActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070C21053666009048A2 /* UIControl+ClosureActions.swift */; };
 		0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070E21053960009048A2 /* GameAssistantViewController.swift */; };
 		0D34071321054693009048A2 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34071221054693009048A2 /* PlayerCell.swift */; };
-		0D340715210546A7009048A2 /* OpinionatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340714210546A7009048A2 /* OpinionatedView.swift */; };
-		0D340717210576EC009048A2 /* UIView+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D340716210576EC009048A2 /* UIView+Layouts.swift */; };
+		0D5932DD21DD2180000349D2 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5932DC21DD2180000349D2 /* Colours.swift */; };
 		0D8A020620FC631C00286C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A020520FC631C00286C9C /* AppDelegate.swift */; };
 		0D8A020820FC631C00286C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A020720FC631C00286C9C /* HomeViewController.swift */; };
 		0D8A020D20FC631D00286C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D8A020C20FC631D00286C9C /* Assets.xcassets */; };
 		0D8A021020FC631D00286C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8A020E20FC631D00286C9C /* LaunchScreen.storyboard */; };
 		0D8A021820FC656A00286C9C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A021720FC656A00286C9C /* HomeView.swift */; };
-		0D8A021A20FC67A600286C9C /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A021920FC67A600286C9C /* PrimaryButton.swift */; };
 		0DE207C6210D9042001E349C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE207C5210D9042001E349C /* Settings.swift */; };
-		0DE207C8210D95C1001E349C /* UIView+standards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE207C7210D95C1001E349C /* UIView+standards.swift */; };
 		0DF75CB42141436500AEACF6 /* FloatingCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF75CB32141436500AEACF6 /* FloatingCounter.swift */; };
 		0DF75CB72141940C00AEACF6 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF75CB62141940C00AEACF6 /* Configurable.swift */; };
 		0DF75CB921419B5100AEACF6 /* PlayerCountersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF75CB821419B5100AEACF6 /* PlayerCountersController.swift */; };
+		44E8084FCC9304A3F48FA0D6 /* Pods_mtg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8860A6453949E9241CCD9496 /* Pods_mtg.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05541C5AE8B0EBAF055E8896 /* Pods-mtg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mtg.release.xcconfig"; path = "Pods/Target Support Files/Pods-mtg/Pods-mtg.release.xcconfig"; sourceTree = "<group>"; };
 		0D2769B8210D0BF3006E4178 /* GameAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantView.swift; sourceTree = "<group>"; };
-		0D2769BA210D12DA006E4178 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		0D2769BC210D16EF006E4178 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0D284992210977D8009496FB /* Mana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mana.swift; sourceTree = "<group>"; };
 		0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+dequeue.swift"; sourceTree = "<group>"; };
-		0D34070A21052ED0009048A2 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
-		0D34070C21053666009048A2 /* UIControl+ClosureActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+ClosureActions.swift"; sourceTree = "<group>"; };
 		0D34070E21053960009048A2 /* GameAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantViewController.swift; sourceTree = "<group>"; };
 		0D34071221054693009048A2 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
-		0D340714210546A7009048A2 /* OpinionatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionatedView.swift; sourceTree = "<group>"; };
-		0D340716210576EC009048A2 /* UIView+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layouts.swift"; sourceTree = "<group>"; };
+		0D5932DC21DD2180000349D2 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		0D8A020220FC631C00286C9C /* mtg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mtg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8A020520FC631C00286C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D8A020720FC631C00286C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -50,12 +42,12 @@
 		0D8A020F20FC631D00286C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D8A021120FC631D00286C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8A021720FC656A00286C9C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0D8A021920FC67A600286C9C /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		0DE207C5210D9042001E349C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		0DE207C7210D95C1001E349C /* UIView+standards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+standards.swift"; sourceTree = "<group>"; };
 		0DF75CB32141436500AEACF6 /* FloatingCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingCounter.swift; sourceTree = "<group>"; };
 		0DF75CB62141940C00AEACF6 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		0DF75CB821419B5100AEACF6 /* PlayerCountersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCountersController.swift; sourceTree = "<group>"; };
+		133D2C5150B51EFCC54B688A /* Pods-mtg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mtg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mtg/Pods-mtg.debug.xcconfig"; sourceTree = "<group>"; };
+		8860A6453949E9241CCD9496 /* Pods_mtg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mtg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E8084FCC9304A3F48FA0D6 /* Pods_mtg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */,
-				0D34070C21053666009048A2 /* UIControl+ClosureActions.swift */,
-				0D340716210576EC009048A2 /* UIView+Layouts.swift */,
-				0DE207C7210D95C1001E349C /* UIView+standards.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -111,6 +101,8 @@
 			children = (
 				0D8A020420FC631C00286C9C /* mtg */,
 				0D8A020320FC631C00286C9C /* Products */,
+				4A57F4171F29F9409F0F59E4 /* Pods */,
+				B947154C91C6C6D5959B4B8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,13 +130,27 @@
 		0DF75CB5214143DF00AEACF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0D34070A21052ED0009048A2 /* Colours.swift */,
-				0D2769BA210D12DA006E4178 /* CircleButton.swift */,
 				0DF75CB32141436500AEACF6 /* FloatingCounter.swift */,
-				0D340714210546A7009048A2 /* OpinionatedView.swift */,
-				0D8A021920FC67A600286C9C /* PrimaryButton.swift */,
+				0D5932DC21DD2180000349D2 /* Colours.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4A57F4171F29F9409F0F59E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				133D2C5150B51EFCC54B688A /* Pods-mtg.debug.xcconfig */,
+				05541C5AE8B0EBAF055E8896 /* Pods-mtg.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B947154C91C6C6D5959B4B8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8860A6453949E9241CCD9496 /* Pods_mtg.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D8A021420FC631D00286C9C /* Build configuration list for PBXNativeTarget "mtg" */;
 			buildPhases = (
+				6733EF4AE3F92371E7C33CB2 /* [CP] Check Pods Manifest.lock */,
 				0D8A01FE20FC631C00286C9C /* Sources */,
 				0D8A01FF20FC631C00286C9C /* Frameworks */,
 				0D8A020020FC631C00286C9C /* Resources */,
+				3E1907C2D09D707639E768BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,31 +220,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E1907C2D09D707639E768BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mtg/Pods-mtg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CaelinCore/CaelinCore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CaelinCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mtg/Pods-mtg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6733EF4AE3F92371E7C33CB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mtg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D8A01FE20FC631C00286C9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0D34071321054693009048A2 /* PlayerCell.swift in Sources */,
+				0D5932DD21DD2180000349D2 /* Colours.swift in Sources */,
 				0DF75CB921419B5100AEACF6 /* PlayerCountersController.swift in Sources */,
 				0D8A021820FC656A00286C9C /* HomeView.swift in Sources */,
 				0D284993210977D8009496FB /* Mana.swift in Sources */,
-				0D340717210576EC009048A2 /* UIView+Layouts.swift in Sources */,
 				0DE207C6210D9042001E349C /* Settings.swift in Sources */,
 				0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */,
-				0D34070D21053666009048A2 /* UIControl+ClosureActions.swift in Sources */,
 				0DF75CB42141436500AEACF6 /* FloatingCounter.swift in Sources */,
-				0D340715210546A7009048A2 /* OpinionatedView.swift in Sources */,
-				0D2769BB210D12DA006E4178 /* CircleButton.swift in Sources */,
 				0D2769B9210D0BF3006E4178 /* GameAssistantView.swift in Sources */,
-				0D34070B21052ED0009048A2 /* Colours.swift in Sources */,
 				0D8A020820FC631C00286C9C /* HomeViewController.swift in Sources */,
 				0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */,
-				0D8A021A20FC67A600286C9C /* PrimaryButton.swift in Sources */,
 				0D2769BD210D16EF006E4178 /* Player.swift in Sources */,
 				0D8A020620FC631C00286C9C /* AppDelegate.swift in Sources */,
 				0DF75CB72141940C00AEACF6 /* Configurable.swift in Sources */,
-				0DE207C8210D95C1001E349C /* UIView+standards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +419,7 @@
 		};
 		0D8A021520FC631D00286C9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 133D2C5150B51EFCC54B688A /* Pods-mtg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,6 +438,7 @@
 		};
 		0D8A021620FC631D00286C9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05541C5AE8B0EBAF055E8896 /* Pods-mtg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

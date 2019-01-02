@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CaelinCore
 
 protocol PlayerCellDelegate {
     func player(cell: PlayerCell, took action:PlayerCell.Action)
@@ -22,7 +23,7 @@ class PlayerCell: UICollectionViewCell {
     let minus: UILabel = Standards.label(showing: "-")
     let actions: UIButton = Standards.button(called: "...")
     
-    let tapBounds: UIView = Standards.view(with: .clear)
+    let tapBounds: UIView = Standards.view(base: .clear)
     var tapGestureRecognizer: UITapGestureRecognizer = {
         let recognizer = UITapGestureRecognizer()
         return recognizer

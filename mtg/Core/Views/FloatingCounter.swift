@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CaelinCore
 
 struct Counter {
     var name: String
