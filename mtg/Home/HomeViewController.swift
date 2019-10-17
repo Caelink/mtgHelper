@@ -17,6 +17,11 @@ class HomeViewController: UIViewController {
         homeView = HomeView(delegate: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func loadView() {
         super.loadView()
         view = homeView
@@ -25,7 +30,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewDelegate {
     func homeViewDidTapPlay(view: HomeView) {
-        let settings = GameSettings()
+        let settings = GameSettings(life: 20, players: 2)
         navigationController?.pushViewController(GameAssistantViewController(with: settings), animated: true)
     }
     
@@ -34,6 +39,6 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func homeViewDidTapLookup(view: HomeView) {
-        /* No-op */
+        navigationController?.pushViewController(TradeViewController(), animated: true)
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		0D2769BD210D16EF006E4178 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2769BC210D16EF006E4178 /* Player.swift */; };
 		0D284993210977D8009496FB /* Mana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D284992210977D8009496FB /* Mana.swift */; };
 		0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */; };
+		0D302FBE229B4E0300950F8C /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D302FBC229B4E0300950F8C /* TradeViewController.swift */; };
+		0D302FBF229B4E0300950F8C /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D302FBD229B4E0300950F8C /* TradeView.swift */; };
+		0D302FC4229B55F000950F8C /* CardRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D302FC3229B55F000950F8C /* CardRecognition.swift */; };
 		0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34070E21053960009048A2 /* GameAssistantViewController.swift */; };
 		0D34071321054693009048A2 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D34071221054693009048A2 /* PlayerCell.swift */; };
 		0D5932DD21DD2180000349D2 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5932DC21DD2180000349D2 /* Colours.swift */; };
@@ -20,7 +23,7 @@
 		0D8A021020FC631D00286C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8A020E20FC631D00286C9C /* LaunchScreen.storyboard */; };
 		0D8A021820FC656A00286C9C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A021720FC656A00286C9C /* HomeView.swift */; };
 		0DE207C6210D9042001E349C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE207C5210D9042001E349C /* Settings.swift */; };
-		0DF75CB42141436500AEACF6 /* FloatingCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF75CB32141436500AEACF6 /* FloatingCounter.swift */; };
+		0DF75CB42141436500AEACF6 /* FloatingCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF75CB32141436500AEACF6 /* FloatingCounterView.swift */; };
 		0DF75CB72141940C00AEACF6 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF75CB62141940C00AEACF6 /* Configurable.swift */; };
 		0DF75CB921419B5100AEACF6 /* PlayerCountersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF75CB821419B5100AEACF6 /* PlayerCountersController.swift */; };
 		44E8084FCC9304A3F48FA0D6 /* Pods_mtg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8860A6453949E9241CCD9496 /* Pods_mtg.framework */; };
@@ -32,6 +35,9 @@
 		0D2769BC210D16EF006E4178 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0D284992210977D8009496FB /* Mana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mana.swift; sourceTree = "<group>"; };
 		0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+dequeue.swift"; sourceTree = "<group>"; };
+		0D302FBC229B4E0300950F8C /* TradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
+		0D302FBD229B4E0300950F8C /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
+		0D302FC3229B55F000950F8C /* CardRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecognition.swift; sourceTree = "<group>"; };
 		0D34070E21053960009048A2 /* GameAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssistantViewController.swift; sourceTree = "<group>"; };
 		0D34071221054693009048A2 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		0D5932DC21DD2180000349D2 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
@@ -43,7 +49,7 @@
 		0D8A021120FC631D00286C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8A021720FC656A00286C9C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0DE207C5210D9042001E349C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		0DF75CB32141436500AEACF6 /* FloatingCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingCounter.swift; sourceTree = "<group>"; };
+		0DF75CB32141436500AEACF6 /* FloatingCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingCounterView.swift; sourceTree = "<group>"; };
 		0DF75CB62141940C00AEACF6 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		0DF75CB821419B5100AEACF6 /* PlayerCountersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCountersController.swift; sourceTree = "<group>"; };
 		133D2C5150B51EFCC54B688A /* Pods-mtg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mtg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mtg/Pods-mtg.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,35 +68,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D28499621097D5E009496FB /* Extensions */ = {
+		0D302FC0229B4E0F00950F8C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		0D340708210521BE009048A2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0D34071221054693009048A2 /* PlayerCell.swift */,
 				0D8A020720FC631C00286C9C /* HomeViewController.swift */,
 				0D8A021720FC656A00286C9C /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0D302FC1229B4E1C00950F8C /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0DE207C5210D9042001E349C /* Settings.swift */,
+				0D284992210977D8009496FB /* Mana.swift */,
+				0D2769BC210D16EF006E4178 /* Player.swift */,
+				0D34071221054693009048A2 /* PlayerCell.swift */,
+				0DF75CB821419B5100AEACF6 /* PlayerCountersController.swift */,
 				0D34070E21053960009048A2 /* GameAssistantViewController.swift */,
 				0D2769B8210D0BF3006E4178 /* GameAssistantView.swift */,
-				0DF75CB821419B5100AEACF6 /* PlayerCountersController.swift */,
 			);
-			path = Views;
+			path = Game;
+			sourceTree = "<group>";
+		};
+		0D302FC2229B4E2A00950F8C /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				0D302FBC229B4E0300950F8C /* TradeViewController.swift */,
+				0D302FBD229B4E0300950F8C /* TradeView.swift */,
+				0D302FC3229B55F000950F8C /* CardRecognition.swift */,
+			);
+			path = Trade;
 			sourceTree = "<group>";
 		};
 		0D3407092105224E009048A2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0DF75CB5214143DF00AEACF6 /* Views */,
-				0D28499621097D5E009496FB /* Extensions */,
-				0D284992210977D8009496FB /* Mana.swift */,
-				0D2769BC210D16EF006E4178 /* Player.swift */,
-				0DE207C5210D9042001E349C /* Settings.swift */,
+				0D28499421097D2D009496FB /* UICollectionView+dequeue.swift */,
+				0DF75CB32141436500AEACF6 /* FloatingCounterView.swift */,
+				0D5932DC21DD2180000349D2 /* Colours.swift */,
 				0DF75CB62141940C00AEACF6 /* Configurable.swift */,
 			);
 			path = Core;
@@ -117,23 +133,16 @@
 		0D8A020420FC631C00286C9C /* mtg */ = {
 			isa = PBXGroup;
 			children = (
+				0D302FC2229B4E2A00950F8C /* Trade */,
+				0D302FC1229B4E1C00950F8C /* Game */,
+				0D302FC0229B4E0F00950F8C /* Home */,
 				0D3407092105224E009048A2 /* Core */,
-				0D340708210521BE009048A2 /* Views */,
 				0D8A020520FC631C00286C9C /* AppDelegate.swift */,
 				0D8A020C20FC631D00286C9C /* Assets.xcassets */,
 				0D8A020E20FC631D00286C9C /* LaunchScreen.storyboard */,
 				0D8A021120FC631D00286C9C /* Info.plist */,
 			);
 			path = mtg;
-			sourceTree = "<group>";
-		};
-		0DF75CB5214143DF00AEACF6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0DF75CB32141436500AEACF6 /* FloatingCounter.swift */,
-				0D5932DC21DD2180000349D2 /* Colours.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4A57F4171F29F9409F0F59E4 /* Pods */ = {
@@ -187,6 +196,7 @@
 				TargetAttributes = {
 					0D8A020120FC631C00286C9C = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -227,20 +237,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mtg/Pods-mtg-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CaelinCore/CaelinCore.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mtg/Pods-mtg-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CaelinCore.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mtg/Pods-mtg-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mtg/Pods-mtg-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mtg/Pods-mtg-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6733EF4AE3F92371E7C33CB2 /* [CP] Check Pods Manifest.lock */ = {
@@ -275,12 +280,15 @@
 				0D34071321054693009048A2 /* PlayerCell.swift in Sources */,
 				0D5932DD21DD2180000349D2 /* Colours.swift in Sources */,
 				0DF75CB921419B5100AEACF6 /* PlayerCountersController.swift in Sources */,
+				0D302FBE229B4E0300950F8C /* TradeViewController.swift in Sources */,
 				0D8A021820FC656A00286C9C /* HomeView.swift in Sources */,
+				0D302FBF229B4E0300950F8C /* TradeView.swift in Sources */,
 				0D284993210977D8009496FB /* Mana.swift in Sources */,
 				0DE207C6210D9042001E349C /* Settings.swift in Sources */,
 				0D34070F21053960009048A2 /* GameAssistantViewController.swift in Sources */,
-				0DF75CB42141436500AEACF6 /* FloatingCounter.swift in Sources */,
+				0DF75CB42141436500AEACF6 /* FloatingCounterView.swift in Sources */,
 				0D2769B9210D0BF3006E4178 /* GameAssistantView.swift in Sources */,
+				0D302FC4229B55F000950F8C /* CardRecognition.swift in Sources */,
 				0D8A020820FC631C00286C9C /* HomeViewController.swift in Sources */,
 				0D28499521097D2D009496FB /* UICollectionView+dequeue.swift in Sources */,
 				0D2769BD210D16EF006E4178 /* Player.swift in Sources */,
@@ -425,13 +433,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88V57QE5FY;
 				INFOPLIST_FILE = mtg/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cjkinc.mtg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,13 +453,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88V57QE5FY;
 				INFOPLIST_FILE = mtg/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cjkinc.mtg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

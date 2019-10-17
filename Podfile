@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.0'
+platform :ios, '13.0'
 source 'https://github.com/caelink/CaelinPods.git'
 
 target 'mtg' do
@@ -7,5 +7,6 @@ target 'mtg' do
   use_frameworks!
 
   # Pods for mtg
-  pod 'CaelinCore', '~> 0.1.1'
+#  pod 'CaelinCore', '~> 0.2'
+  pod 'CaelinCore', :path => '../CaelinCore'
 end

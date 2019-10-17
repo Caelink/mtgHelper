@@ -18,8 +18,8 @@ protocol HomeViewDelegate {
 class HomeView: UIView {
     let delegate: HomeViewDelegate
     var playButton: PrimaryButton = PrimaryButton(text: "Play", colour: InterfaceColours.green)
-    var tradeButton: PrimaryButton = PrimaryButton(text: "Trade", colour: InterfaceColours.lightBlue)
     var lookupButton: PrimaryButton = PrimaryButton(text: "Lookup", colour: InterfaceColours.orange)
+    var tradeButton: PrimaryButton = PrimaryButton(text: "Trade", colour: InterfaceColours.lightBlue)
     
     var menuScreenTitleLabel: UILabel = {
         let label = Standards.label(showing: "Caelin's MTG Helper App")
@@ -30,7 +30,7 @@ class HomeView: UIView {
     init(delegate: HomeViewDelegate) {
         self.delegate = delegate
         super.init(frame: .zero)
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
         self.setup()
     }
     
@@ -42,19 +42,18 @@ class HomeView: UIView {
             menuScreenTitleLabel.centerYAnchor.constraint(equalTo: topAnchor, constant: 200)
         ])
         
-        verticalCascadeLayout(of: [playButton, tradeButton, lookupButton], from: centerYAnchor, margin: 20)
+        verticalCascadeLayout(of: [playButton, lookupButton, tradeButton], from: centerYAnchor, margin: 20)
         
         playButton.addAction(for: .touchUpInside) { [unowned self] in
             self.delegate.homeViewDidTapPlay(view: self)
         }
         
-        tradeButton.isEnabled = false
-        tradeButton.addAction(for: .touchUpInside) { [unowned self] in
-            self.delegate.homeViewDidTapTrade(view: self)
+        lookupButton.addAction(for: .touchUpInside) { [unowned self] in
+            self.delegate.homeViewDidTapLookup(view: self)
         }
         
-        lookupButton.isEnabled = false
-        lookupButton.addAction(for: .touchUpInside) { [unowned self] in
+        tradeButton.isEnabled = false
+        tradeButton.addAction(for: .touchUpInside) { [unowned self] in
             self.delegate.homeViewDidTapTrade(view: self)
         }
     }

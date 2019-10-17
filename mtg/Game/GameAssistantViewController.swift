@@ -36,6 +36,10 @@ class GameAssistantViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     override func loadView() {
         super.loadView()
         view = gameAssistantView
@@ -109,13 +113,13 @@ extension GameAssistantViewController: PlayerCellDelegate {
             delta = -1
             break;
         case .longTapLeft:
-            delta = -10
+            delta = -5
             break;
         case .tapRight:
             delta = 1
             break;
         case .longTapRight:
-            delta = 10
+            delta = 5
             break;
         case .moreOptions:
             let alert = UIAlertController(title: "Player Options", message: nil, preferredStyle: .actionSheet)
@@ -133,6 +137,12 @@ extension GameAssistantViewController: PlayerCellDelegate {
                     cell.update(from: players[id])
                 })
             }))
+//            alert.addAction(UIAlertAction(title: "Set Colour", style: .default, handler: { _ in
+//                let colourAlert = UIAlertController(title: "Player Colour", message: nil, preferredStyle: .actionSheet)
+//                for color in InterfaceColours.allColours {
+//
+//                }
+//            }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return;

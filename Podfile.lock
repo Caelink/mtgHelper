@@ -1,16 +1,16 @@
 PODS:
-  - CaelinCore (0.1.1)
+  - CaelinCore (0.2.0)
 
 DEPENDENCIES:
-  - CaelinCore (~> 0.1.1)
+  - CaelinCore (from `../CaelinCore`)
 
-SPEC REPOS:
-  https://github.com/caelink/CaelinPods.git:
-    - CaelinCore
+EXTERNAL SOURCES:
+  CaelinCore:
+    :path: "../CaelinCore"
 
 SPEC CHECKSUMS:
-  CaelinCore: f051be3bf71fd619ed4a563ba02475db11a8aaa1
+  CaelinCore: fa2b4f8a2d2e961928ccb284ab2fc0d513fa1767
 
-PODFILE CHECKSUM: f459221494eae60ffbfdcd64295f8e44066f3971
+PODFILE CHECKSUM: 1dd09b78539f5df93a9df8dcbec97115972520ee
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
